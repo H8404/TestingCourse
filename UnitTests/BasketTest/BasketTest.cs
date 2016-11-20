@@ -27,7 +27,6 @@ namespace BasketTest
         [TestMethod]
         public void Basket_CustomerIsString()
         {
-            
 
             Assert.IsInstanceOfType(basket.Customer, typeof(String),"Customer ei ollut string muotoa");
         }
@@ -35,8 +34,6 @@ namespace BasketTest
         [TestMethod]
         public void Basket_ContentsIsList()
         {
-            List<String> c = new List<string>(new string[] { "Banaani", "Maito", "Muna" });
-            Basket basket = new Basket("Jari", c, 15.0);
 
             Assert.IsInstanceOfType(basket.Contents, typeof( List<String>));
         }
@@ -44,8 +41,6 @@ namespace BasketTest
         [TestMethod]
         public void Basket_PriceIsNumber()
         {
-            List<String> c = new List<string>(new string[] { "Banaani", "Maito", "Muna" });
-            Basket basket = new Basket("Jari", c, 15.0);
 
             Assert.IsInstanceOfType(basket.Price, typeof(double));
         }
@@ -53,8 +48,6 @@ namespace BasketTest
         [TestMethod]
         public void Basket_AddProductIsWorking()
         {
-            List<String> c = new List<string>(new string[] { "Banaani", "Maito", "Muna" });
-            Basket basket = new Basket("Jari", c, 15.0);
 
             string newProduct = "Vanukas";
             basket.AddProduct(newProduct, 6.0);
@@ -64,8 +57,6 @@ namespace BasketTest
         [TestMethod]
         public void Basket_DeleteProductIsWorking()
         {
-            List<String> c = new List<string>(new string[] { "Banaani", "Maito", "Muna" });
-            Basket basket = new Basket("Jari", c, 15.0);
 
             string deleteProduct = "Maito";
             basket.DeleteProduct(deleteProduct, 4.5);
